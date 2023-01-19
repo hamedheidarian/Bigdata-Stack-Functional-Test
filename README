@@ -1,4 +1,4 @@
-Producer application sends a number into kafka "test" topic and in SparkCassandraConsumer.
-<br/> Spark consumes it and saves it into cassandra.
+Producer application sends a number into kafka "test" topic.
+<br/> in SparkCassandraConsumer, Spark consumes it and multiply by 2 and saves it into cassandra via SQL Streaming.
 <br/> HadoopConsumer consumes the topic and writes it to a file named test in HDFS.
 <br/> TODO: create a script to delete the resulting records in spark, cassandra, HDFS after test is done.
