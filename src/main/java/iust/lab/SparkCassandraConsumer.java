@@ -24,11 +24,10 @@ public class SparkCassandraConsumer {
                     "   WITH REPLICATION = { \n" +
                     "      'class' : 'SimpleStrategy', 'replication_factor' : 1 } ";
             session.execute(keyspace);
-            StringBuilder sb = new StringBuilder("CREATE TABLE IF NOT EXISTS ")
-                    .append("default.test_tb").append("(")
-                    .append("id uuid PRIMARY KEY, ")
-                    .append("sparkRes bigint").append(")");
-            String query = sb.toString();
+            String query = "CREATE TABLE IF NOT EXISTS " +
+                    "default.test_tb" + "(" +
+                    "id uuid PRIMARY KEY, " +
+                    "sparkRes bigint" + ")";
             session.execute(query);
 
         }

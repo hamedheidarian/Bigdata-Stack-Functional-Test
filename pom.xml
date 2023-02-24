@@ -17,6 +17,16 @@
             </plugin>
         </plugins>
     </build>
+    <properties>
+        <junit.version>3.8.1</junit.version>
+        <jackson-module-scala_2.11.version>2.8.8</jackson-module-scala_2.11.version>
+        <spark.version>2.1.0</spark.version>
+        <spark-cassandra-connector_2.11.version>2.5.2</spark-cassandra-connector_2.11.version>
+        <joda-time.version>2.10.13</joda-time.version>
+        <cassandra-driver-core.version>3.1.0</cassandra-driver-core.version>
+        <datastax.version>4.13.0</datastax.version>
+        <hadoop.version>3.3.1</hadoop.version>
+    </properties>
     <name>numgen</name>
     <url>http://maven.apache.org</url>
     <dependencies>
@@ -28,75 +38,75 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.module</groupId>
             <artifactId>jackson-module-scala_2.11</artifactId>
-            <version>2.8.8</version>
+            <version>${jackson-module-scala_2.11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql-kafka-0-10_2.11</artifactId>
-            <version>2.1.0</version>
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming_2.11</artifactId>
-            <version>2.1.0</version>
+            <version>${spark.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.datastax.spark/spark-cassandra-connector -->
         <dependency>
             <groupId>com.datastax.spark</groupId>
             <artifactId>spark-cassandra-connector_2.11</artifactId>
-            <version>2.5.2</version>
+            <version>${spark-cassandra-connector_2.11.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.11</artifactId>
-            <version>2.1.0</version>
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
-            <version>2.1.0</version>
+            <version>${spark.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
-            <version>2.10.13</version>
+            <version>${joda-time.version}</version>
         </dependency>
         <dependency>
             <groupId>com.datastax.cassandra</groupId>
             <artifactId>cassandra-driver-core</artifactId>
-            <version>3.1.0</version>
+            <version>${cassandra-driver-core.version}</version>
         </dependency>
         <dependency>
             <groupId>com.datastax.oss</groupId>
             <artifactId>java-driver-core</artifactId>
-            <version>4.13.0</version>
+            <version>${datastax.version}</version>
         </dependency>
         <dependency>
             <groupId>com.datastax.oss</groupId>
             <artifactId>java-driver-query-builder</artifactId>
-            <version>4.13.0</version>
+            <version>${datastax.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs</artifactId>
-            <version>3.3.1</version>
+            <version>${hadoop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-hdfs-client</artifactId>
-            <version>3.1.2</version>
+            <version>${hadoop.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>hadoop-common</artifactId>
-            <version>3.2.0</version>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 </project>
